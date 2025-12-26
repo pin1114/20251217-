@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>恬典-定位</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- 頁首 -->
+    <header id="navbar">
+        <div class="logo">恬典</div>
+        <div class="navigation">
+            <ul class="menu">
+                <li><a href="./index.html">首頁</a></li>
+                <li><a href="./menu.html">菜單</a></li>
+                <li><a href="#">定位</a></li>
+                <li><a href="./contact.html">聯絡</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 主要 -->
+    <main>
+        <section class="reservationmain margincenter">
+            <header class="title">
+                <h3>定位</h3>
+            </header>
+
+            <!-- 日期 -->
+            <section class="booking-block">
+                <h4>選擇日期</h4>
+                <div>
+                    <input type="text" id="calendar" class="dateinput">
+                </div>
+            </section>
+
+            <!-- 表單 -->
+            <section class="booking-block">
+              <h4>定位資訊</h4>
+              <form class="booking-form">
+                <input type="text" placeholder="姓名">
+                <input type="tel" placeholder="電話">
+                <input type="number" placeholder="人數">
+              </form>
+            </section>
+
+            <!-- 注意事項 -->
+            <section class="booking-block notice">
+              <h4>注意事項</h4>
+              <p>※ 請於營業時間內完成定位</p>
+              <p>※ 若需取消請提前告知</p>
+            </section>
+
+            <!-- 按鈕 -->
+            <div class="button">
+              <button>送出</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer>
+        <h2>恬典</h2>
+        <nav>
+            <ul>
+                <li><a href="./index.html">首頁</a></li>
+                <li><a href="./menu.html">菜單</a></li>
+                <li><a href="./reservation.html">定位</a></li>
+                <li><a href="./contact.html">聯絡</a></li>
+            </ul>
+        </nav>
+        <small>Copyright &copy; 恬典 2025.</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#calendar", {
+            inline: true,          // 直接顯示
+            locale: "zh_tw",       // 中文
+            minDate: "today",      // 今天以後
+            dateFormat: "Y-m-d"
+        });
+    </script>
+</body>
+</html>
